@@ -1,0 +1,139 @@
+<!--Desarrollo creado para prueba de conocimientos.
+    Por: Julio cesar morales
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>.::Prueba</title>
+    <!-- Latest compiled and minified CSS and font Awesome   -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- jQuery library and Validate Plugin-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom Js files -->
+    <script src="js/index.js"></script>
+    <style>
+      form .error {
+        color: #ff0000;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container shadow p-sm-5">
+        <div class="row">
+          <div class="col-sm-9">
+            <h2>.::PHP Casino::.</h2>
+          </div>
+          <div class="col-sm-3 text-center">
+            <div class="spinner-border" id="loadding"></div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm-9 border">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <h4>Resultados</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                Mesa N° 1:
+              </div>
+              <div class="col-sm-6 text-center" id="resultado">
+
+              </div>
+              <input type="hidden" id="resulId">
+            </div>
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <h5>Jugadores</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 border" id="conteJugadores">
+                No hay jugadores en la mesa
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 border">
+            <div class="row ">
+              <div class="col-sm-12 text-center">
+                <h4>Administración</h4>
+              </div>
+            </div>
+            <div class="row mb-sm-1">
+              <div class="col-sm-12">
+                <input class="btn btn-primary" value="Crear Jugador" id="crearJugador">
+              </div>
+            </div>
+            <div class="row mb-sm-1">
+              <div class="col-sm-12">
+                <input class="btn btn-secondary" value="Apostar" id="apostar">
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- The Modal -->
+      <div class="modal" id="ModalCreate">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title" id="titleModal"></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" >
+              <form action="#" id="ModalForm">
+                <div class="form-group">
+                  <label for="nick">Nick:</label>
+                  <input type="text" class="form-control" placeholder="Nick" id="nick" name="nick">
+                </div>
+                <div class="form-group">
+                  <label for="nombre">Nombres:</label>
+                  <input type="text" class="form-control" placeholder="Nombres" id="nombre" name="nombre">
+                </div>
+                <div class="form-group">
+                  <label for="apellido">Apellidos:</label>
+                  <input type="text" class="form-control" placeholder="Apellidos" id="apellido" name="apellido">
+                </div>
+                <div class="form-group">
+                  <label for="email">EMail:</label>
+                  <input type="text" class="form-control" placeholder="EMail" id="email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="fondos">Fondos:</label>
+                  <input type="number" class="form-control" placeholder="Fondos" id="fondos" name="fondos" min="10000">
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <div class="spinner-border" id="loaddingModal" style="display: none;"></div>
+              <button type="button" class="btn btn-success"  id="guardarModal" >Guardar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
